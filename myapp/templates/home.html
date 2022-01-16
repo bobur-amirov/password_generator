@@ -5,8 +5,8 @@
 
 <form action="{% url 'password' %}">
     <div class="form-group">
-    <label>Length</label>
-    <select name="length" class="form-control">
+    <label>Uzunligini tanlang</label>
+    <select name="len" class="form-control">
       <option>6</option>
       <option>7</option>
       <option>8</option>
@@ -19,20 +19,20 @@
     <div class="form-check">
       <input class="form-check-input" type="checkbox" name="uppercase">
       <label class="form-check-label">
-        UpperCase
+        Katta harflar ham qaynashsinmi?
       </label>
         <br>
       <input class="form-check-input" type="checkbox" name="numbers">
       <label class="form-check-label">
-        Numbers
+        Raqamlar ham qatnashsinmi?
       </label>
         <br>
       <input class="form-check-input" type="checkbox" name="special">
       <label class="form-check-label">
-        Special
+        Maxsus belgilar ham qatnashsinmi?
       </label>
     </div>
-    <button class="btn btn-success" type="submit">Generate Password</button>
+    <button class="btn btn-success" type="submit">Password Generate </button>
 </form>
 
 {% endblock %}

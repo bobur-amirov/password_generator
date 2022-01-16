@@ -16,10 +16,14 @@ def password(request):
     if request.GET.get('special'):
         characters.extend(list('!@#$%^&*()?><:;'))
 
-    length = int(request.GET.get("length"))
+    len = int(request.GET.get("len"))
 
-    thepassword = ''
-    for x in range(length):
-        thepassword += random.choice(characters)
+    password = ''
+    for x in range(len):
+        password += random.choice(characters)
 
-    return render(request, 'password.html', {"password":thepassword})
+    context = {
+        "password":password,
+        }
+
+    return render(request, 'password.html', context)
